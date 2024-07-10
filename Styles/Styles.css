@@ -6,7 +6,6 @@
     width: 100%;
     height: 800px;
     background-color: linear-gradient(to top, #000000, #ffffff,#000000);
-
     background-image: url("/Icons/Mejores-bienes\ raices-en-Cancun-para-invertir-1.jpg"), linear-gradient(to bottom, rgba(9, 9, 9, 0.593) 0%, rgba(0, 0, 0, 0.092) 50%, rgba(9, 9, 9, 0.593) 100%);
     background-blend-mode: overlay;
     overflow-clip-margin: content-box;
@@ -339,18 +338,20 @@
   background-color: none;
 }
 
-/**/
+/*Propiedades destacadas*/
 
 #CardPropiedades {
   
 #container{
-	box-shadow: 0 5px 10px 1px grey;
-	background: rgba(255, 255, 255, 0.10);
+
+
+	
+	background-color: #c3c3c32f;
 	text-align: center;
 	border-radius: 2px;
 	overflow: hidden;
 	margin: 5em auto;
-	height: 400px;
+	height: 50%;
 	width: 100%;
 }
 
@@ -363,6 +364,7 @@
 	height: 100%;
 	float: right;
 	width: 50%;
+  
 
 }
 
@@ -443,8 +445,8 @@
 
 .product-image {
 	transition: all 0.3s ease-out;
-	
-	position: relative;
+	object-fit: cover;
+  image-resolution: absolote;
 	overflow: hidden;
 	height: 100%;
 	float: left;
@@ -484,6 +486,7 @@
 /* Target the #Busquedaportipo element */
 #Busquedaportipo {
   h1 {
+    font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
     font-size: 2em;
     color: #000000; 
     text-align: center; 
@@ -493,4 +496,150 @@
     border-bottom: 0.5px solid #00000026;
   }
 
+
+
 }
+
+/*Pre ventas*/
+#CardPreventas {
+  
+  #container{
+  
+  
+    
+    background-color: #c3c3c32f;
+    text-align: center;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 5em auto;
+    height: 50%;
+    width: 100%;
+  }
+  
+  
+  .product-details {
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    padding: 2%;
+    height: 100%;
+    float: left;
+    width: 50%;
+    
+  
+  }
+  
+  #container .product-details h1{
+    font-family: Playfair Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+    display: inline-block;
+    font-size: 300%;
+    color:#00396b;
+    margin-top: 10%;
+    border-bottom: 2px solid #00396b;
+    padding-bottom: 10px; 
+    
+  }
+  
+  #container .product-details h1:before{
+    position: absolute;
+    content: '';
+    right: 0%; 
+    top: 0%;
+    transform: translate(25px, -15px);
+    font-family: 'Bree Serif', serif;
+    display: inline-block;
+    background: #bdbdbd;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px;
+    color: white;
+    margin: 0;
+    animation: chan-sh 6s ease infinite;
+  
+  }
+  
+  
+  
+  #container .product-details > p {
+  
+    text-align: left;
+    font-size: 18px;
+    color: #000000;
+    
+  }
+  
+  .btn {
+  
+    transform: translateY(0px);
+    transition: 0.1s linear;
+    background: linear-gradient(to top, #004888, #012545);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #eee;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .btn:hover{transform: translateY(-6px);
+    background:linear-gradient(to top, #004888, #012545);}
+  
+  .btn span {
+    
+    transition: transform 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin:0;
+    
+  }
+  
+  
+  .btn .price {
+    transform: translateX(-10%); padding-right: 15px;
+  }
+  
+  
+  
+  .product-image {
+    transition: all 0.3s ease-out;
+    object-fit: cover;
+    image-resolution: absolote;
+    overflow: hidden;
+    height: 100%;
+    float: left;
+    width: 50%;
+    display: inline-block;
+  }
+  
+  #container img {width: 100%;height: 100%;}
+  
+  .info {
+      background: rgba(27, 26, 26, 0.9);
+      font-family: 'Bree Serif', serif;
+      transition: all 0.3s ease-out;
+      transform: translateX(-100%);
+      position: absolute;
+      line-height: 1.8;
+      text-align: left;
+      font-size: 105%;
+      cursor: no-drop;
+      color: #FFF;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+  }
+  
+  .info h2 {text-align: center}
+  .product-image:hover .info{transform: translateX(0);}
+  
+  .info ul li{transition: 0.3s ease;}
+  .info ul li:hover{transform: translateX(50px) scale(1.3);}
+  
+  .product-image:hover img {transition: all 0.3s ease-out;}
+  .product-image:hover img {transform: scale(1.2, 1.2);}
+  }

@@ -44,9 +44,30 @@
                 <ul class="nav-menu">
                   <li><a href="#">Buscar</a></li>
                   <li><a href="#">Destacadas</a></li>
-                  <li><a href="#">Tipos de propiedad</a></li>
-                  <li><a href="#">Puerto Cancun</a></li>
-                  <li><a href="#">Zonas</a></li>
+                  <li class="dropdown">
+                    <a href="#">Tipos de propiedad</a>
+                    <ul class="dropdown-content">
+                      <li><a href="#">Casa</a></li>
+                      <li><a href="#">Departamento</a></li>
+                      <li><a href="#">Terreno</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#">Puerto Cancún</a>
+                    <ul class="dropdown-content">
+                      <li><a href="#">Marina</a></li>
+                      <li><a href="#">Golf</a></li>
+                      <li><a href="#">Residencial</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#">Zonas</a>
+                    <ul class="dropdown-content">
+                      <li><a href="#">Zona Hotelera</a></li>
+                      <li><a href="#">Centro</a></li>
+                      <li><a href="#">Zona Residencial</a></li>
+                    </ul>
+                  </li>
                   <li><a href="#">Vender</a></li>
                   <li><a href="#">inicio de sesión</a></li>
                   <li><a href="#">988-000-0000</a></li>
@@ -64,10 +85,8 @@
           <div class="row">
             <div class="col-sm-12 col-md-6 offset-md-3">
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon2">
-                <span class="input-group-text" id="basic-addon2">
-                  <i class="fas fa-search" style="align-items: left;"> <img src="/Icons/simbolo-de-interfaz-de-lupa-de-busqueda.png" alt="buscar" with="20px" height="20px"><h5 style="color: white;">Buscar</h5></i>
-                </span>
+                <input type="text" style="margin: 1%;" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon2">
+                <button id="Bucar" class="btn btn-warning" style="color: white;">Buscar</button>
               </div>
             </div>
           </div>

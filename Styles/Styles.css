@@ -33,6 +33,7 @@
     width: 100%;
   
     ul {
+      
       max-height: 0;
       overflow: hidden;
       margin: 0;
@@ -67,20 +68,26 @@
       }
   
       .dropdown-content {
+        
         display: none; 
         position: absolute;
         background-color: #33363b;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
+        .show {
+          display: block; 
+        }
   
         li {
+          
           border-bottom: none;
           a {
             padding: 12px 16px;
             text-align: left;
             &:hover {
               background-color: #575757;
+              
             }
           }
         }
@@ -88,6 +95,7 @@
   
       &:hover .dropdown-content {
         display: block; 
+        
       }
     }
   
@@ -128,10 +136,11 @@
         a {
           display: block;
           color: #fff;
-          padding: 0 26px;
           border: white;
+          border-radius: 5px;
           &:hover {
             color: #eeeeee;
+            border: white;
             background: #00396b;
             
           }
@@ -210,6 +219,7 @@
 }
 
 
+
 #buscador .text-center.container h2,
 #buscador #Titulo h2{
   margin-top: 15%; 
@@ -224,43 +234,18 @@
   background-image: linear-gradient(to top, #004888, #012545);
   padding: 5%;
 }
-
-.input-group .form-control {
-  padding: 1%;
-  background-color: #ffff;
-  border: 1px solid #ccc;
-  
-}
-
-.input-group .input-group-text {
-  background-image: linear-gradient(to top, #cbc802b7, #7e7c02b7);
+ #TextoBusqueda{
+  width: 80%;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 1%;
-  cursor: pointer;
+  margin-left: 2%;
+  margin-right: 1%;
+ }
+
+#Search
+{
+color: white;
+border-radius: 5px;
 }
-
-.input-group .input-group-text:hover{
-  background-image: linear-gradient(to top, #7e7c02b7, #cbc802b7);
-  border: 1px solid #ccc;
-  
-  cursor: pointer;
-}
-
-.input-group .input-group-text i {
-  color: #333;
-}
-
-
-.input-group:focus-within .form-control {
-  border-color: #999;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.input-group:focus-within .input-group-text {
-  border-color: #999;
-}
-
 
 
 

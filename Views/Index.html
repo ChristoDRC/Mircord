@@ -5,10 +5,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="icon" href="%= BASE_URL %>favicon.ico">
+        <link rel="icon" href="/Icons/178302.png">
         <link rel="stylesheet" href="/Styles/Styles.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <title>Mircorp</title>    
   </head> 
@@ -77,20 +77,19 @@
             </div>
         </div>
         <div id="buscador" class="text-center container">
-          <div id="Titulo">
-          <h2 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">Propiedades de Lujo en Cancun</h2>
-          <h1 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">EXPERTOS EN BIENES RAICES</h1>
-        </div>
-        <div class="container mt-5">
-          <div class="row">
-            <div class="col-sm-12 col-md-6 offset-md-3">
-              <div class="input-group mb-3">
-                <input type="text" style="margin: 1%;" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon2">
-                <button id="Bucar" class="btn btn-warning" style="color: white;">Buscar</button>
+                <div id="Titulo">
+                  <h2 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">Propiedades de Lujo en Cancun</h2>
+                 <h1 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">EXPERTOS EN BIENES RAICES</h1>
+               </div>
+              <div id="Searchingbar" class="container mt-5">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 offset-md-3">
+                    <div class="input-group mb-3">         
+                    <input type="text" id="TextoBusqueda"> <button class="btn btn-warning" id="Search"><span><img src="/Icons/simbolo-de-interfaz-de-lupa-de-busqueda.png" width="20px" height="20px" style="margin-right:2px;"></span>Buscar</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
         </div>    
     </div>
     
@@ -362,7 +361,11 @@
 
     
     <img class="btn-whatsapp" src="/Icons/social.png" width="64" height="64" alt="Whatsapp" onclick="window.location.href='https://wa.me/9900000?text=Hola!%20Estoy%20interesado%20en%20tu%20servicio'">
-    <script src="/JavaScript/Javascript.js"></script>
-  </body> 
+    
+   <script src="/JavaScript/Javascript.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybRigFuxA3DfC7NSHgAW62p6pGfJULc9lIkvS2WZHvcOIJ2lF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-WEo0oVQ3u04rJ42PgKjbVWrW8/HT2jPc0wS4UC/HeLvvVZOJ3BcUPWYfxqGcOKE3" crossorigin="anonymous"></script>
 
+  </body> 
+  
 </html>

@@ -31,7 +31,7 @@
                 
               </div>
               <div class="d-flex flex-row-reverse">
-                <a href="#" id="Idioma" style="color: white; ">English</a>
+                <a href="#" id="Idioma" style="color: white; margin-top: 10px; margin-bottom: 5px; ">English</a>
               </div>
 
               
@@ -43,14 +43,26 @@
                         <span></span>
                       </button>
                       <ul class="nav-menu">
-                        <li><button type="button">Buscar</button></li>
+                        <li><button type="button" onclick="focusTextbox()">Buscar</button></li>
                         <li><button>Destacadas</button></li>
                         <li class="dropdown">
                           <button>Tipos de propiedad</button>
                           <ul class="dropdown-content">
-                            <li><button>Casa</button></li>
-                            <li><button>Departamento</button></li>
-                            <li><button>Terreno</button></li>
+                            <div class="row">
+                            <div class="container"><li><a>Ver todo en venta</a></li></div>
+                            <div class="col-sm-5 col-md-6">
+                              <li><a>casas</a></li>
+                              <li><a>Terrenos</a></li>
+                              <li><a>Preventas</a></li>
+                              <li><a>Rentas</a></li>
+                            </div>
+                            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                              <li><a>Departamentos</a></li>
+                              <li><a>Comercial</a></li>
+                              <li><a>Desarrollos</a></li>
+                              <li><a>Destacadas</a></li>
+                            </div>
+                           </div>
                           </ul>
                         </li>
                         <li class="dropdown">

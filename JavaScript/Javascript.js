@@ -13,3 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+function focusTextbox() {
+  document.getElementById('TextoBusqueda').focus();
+}

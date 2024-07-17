@@ -1,19 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var dropdowns = document.querySelectorAll('.dropdown-toggle');
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
   
-  dropdowns.forEach(function(dropdown) {
-    dropdown.addEventListener('click', function(e) {
-      e.preventDefault();
-      var content = this.nextElementSibling;
-      if (content.classList.contains('show')) {
-        content.classList.remove('show');
-      } else {
-        content.classList.add('show');
-      }
-    });
+  dropdownToggles.forEach(toggle => {
+      const dropdownMenu = toggle.nextElementSibling;
+      
+      toggle.addEventListener('click', function (event) {
+          const isVisible = dropdownMenu.style.display === 'block';
+          dropdownMenu.style.display = isVisible ? 'none' : 'block';
+          toggle.querySelector('svg').style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
+          event.stopPropagation();
+      });
+  });
+
+  // Cierra los menús si se hace clic fuera de ellos
+  window.addEventListener('click', function (e) {
+      dropdownToggles.forEach(toggle => {
+          const dropdownMenu = toggle.nextElementSibling;
+          if (!toggle.contains(e.target)) {
+              dropdownMenu.style.display = 'none';
+              toggle.querySelector('svg').style.transform = 'rotate(0deg)';
+          }
+      });
   });
 });
-
-function focusTextbox() {
-  document.getElementById('TextoBusqueda').focus();
-}

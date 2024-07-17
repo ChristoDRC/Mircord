@@ -1,193 +1,249 @@
-
 <!DOCTYPE html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="icon" href="/Icons/178302.png">
-        <link rel="stylesheet" href="/Styles/Styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet">
-        
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <title>Mircorp</title>    
-  </head> 
-    
-  <body> 
-    <div id="header">
-              <div class="row" id="">
-              <div class="col-sm-6 col-md-5 col-lg-6"><img src="/Icons/Mircorp.png" width="400px" height="150px" ></div>
-              <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">     
-                <div class="d-flex flex-row-reverse"> 
-                <div id="divisa" class="dropdown">
-                <label for="currency-select">Selecciona una moneda:</label>
-                <select id="currency-select" name="currency">
-                  <option value="USD">USD Dollar</option>
-                  <option value="MXN">MXN Peso</option>
-                  <option value="EUR">EUR Euro</option>
-                  <option value="GBP">GBP Pound Sterling</option>
-                </select>
-                </div>
-                
-              </div>
-              <div class="d-flex flex-row-reverse">
-                <a href="#" id="Idioma" style="color: white; margin-top: 10px; margin-bottom: 5px; ">English</a>
-              </div>
 
-              
-                            
-                    <nav id="menu">
-                      <button class="nav-mobile" id="nav-mobile">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </button>
-                      <ul class="nav-menu">
-                        <li><button type="button" onclick="focusTextbox()">Buscar</button></li>
-                        <li><button>Destacadas</button></li>
-                        <li class="dropdown">
-                          <button>Tipos de propiedad</button>
-                          <ul class="dropdown-content">
-                            <div class="row">
-                            <div class="container"><li><a>Ver todo en venta</a></li></div>
-                            <div class="col-sm-5 col-md-6">
-                              <li><a>casas</a></li>
-                              <li><a>Terrenos</a></li>
-                              <li><a>Preventas</a></li>
-                              <li><a>Rentas</a></li>
-                            </div>
-                            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-                              <li><a>Departamentos</a></li>
-                              <li><a>Comercial</a></li>
-                              <li><a>Desarrollos</a></li>
-                              <li><a>Destacadas</a></li>
-                            </div>
-                           </div>
-                          </ul>
-                        </li>
-                        <li class="dropdown">
-                          <button>Puerto Cancún</button>
-                          <ul class="dropdown-content">
-                            <li><button>Marina</button></li>
-                            <li><button>Golf</button></li>
-                            <li><button>Residencial</button></li>
-                          </ul>
-                        </li>
-                        <li class="dropdown">
-                          <button>Zonas</button>
-                          <ul class="dropdown-content">
-                            <li><button>Zona Hotelera</button></li>
-                            <li><button>Centro</button></li>
-                            <li><button>Zona Residencial</button></li>
-                          </ul>
-                        </li>
-                        <li><button>Vender</button></li>
-                        <li><button type="button" class="btn btn-outline-light" style="border: white;">Inicio de sesión</button></li>
-                        <li><button>988-000-0000</button></li>
-                      </ul>
-                    </nav>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="/Icons/178302.png">
+  <link rel="stylesheet" href="/Styles/Styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet">
 
-            </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Mircorp</title>
+</head>
+
+<body>
+  <div id="header">
+    <div class="row" id="">
+      <div class="col-sm-6 col-md-5 col-lg-6"><img src="/Icons/Mircorp.png" width="400px" height="150px"></div>
+      <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">
+        <div class="d-flex flex-row-reverse">
+          <div id="divisa" class="dropdown">
+            <label for="currency-select">Selecciona una moneda:</label>
+            <select id="currency-select" name="currency">
+              <option value="USD">USD Dollar</option>
+              <option value="MXN">MXN Peso</option>
+              <option value="EUR">EUR Euro</option>
+              <option value="GBP">GBP Pound Sterling</option>
+            </select>
+          </div>
+
         </div>
-        <div id="buscador" class="text-center container">
-                <div id="Titulo">
-                  <h2 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">Propiedades de Lujo en Cancun</h2>
-                 <h1 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">EXPERTOS EN BIENES RAICES</h1>
-               </div>
-              <div id="Searchingbar" class="container mt-5">
-                <div class="row">
-                  <div class="col-sm-12 col-md-6 offset-md-3">
-                    <div class="input-group mb-3">         
-                    <input type="text" id="TextoBusqueda" placeholder="Ciudad, Dirección, Código Postal"> <button class="btn btn-warning" id="Search"><span><img src="/Icons/simbolo-de-interfaz-de-lupa-de-busqueda.png" width="20px" height="20px" style="margin-right:2px;"></span>Buscar</button>
-                    </div>
+        <div class="d-flex flex-row-reverse">
+          <a href="#" id="Idioma" style="color: white; margin-top: 10px; margin-bottom: 5px; ">English</a>
+        </div>
+
+
+        <nav id="menu">
+          <button class="nav-mobile" id="nav-mobile">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+          <ul class="nav-menu">
+              <li><button type="button" onclick="focusTextbox()">Buscar</button></li>
+              <li><button>Destacadas</button></li>
+              <li class="dropdown">
+                  <button class="dropdown-toggle">
+                      Tipos de propiedad
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <!-- SVG content -->
+                      </svg>
+                  </button>
+                  <div class="dropdown-menu">
+                      <div class="row">
+                          <div class="container" style="width: 400px;">
+                              <a href="#">Ver todo en venta</a>
+                          </div>
+                          <div class="col-sm-5 col-md-6">
+                              <a href="#">Casas</a>
+                              <a href="#">Terrenos</a>
+                              <a href="#">Pre-Ventas</a>
+                              <a href="#">Rentas</a>
+                          </div>
+                          <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                              <a href="#">Departamentos</a>
+                              <a href="#">Comercial</a>
+                              <a href="#">Desarrollos</a>
+                              <a href="#">Destacadas</a>
+                          </div>
+                      </div>
                   </div>
-                </div>
-              </div>
-        </div>    
-    </div>
-    
-    <div id="contacto" class="container text-center">
-      <h1 id="contactanos" style="font-family: 'Times New Roman', Times, serif;"> Contactanos Hoy</h1>
-    </div>
-    <div id="Telefono" class="container text-center">
-      <div class="row">
-        <div class="col-sm-5 col-md-6" style="margin-top: auto;"><button type="button" class="btn btn-light btn-lg" id="Numerodetelefono">MEX 998-688-0710</button></div>
-        <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0" style="margin: auto;"><button type="button" class="btn btn-light btn-lg" id="Numerodetelefono">US 817-400-4324</button></div>
+              </li>
+              <li class="dropdown">
+                  <button class="dropdown-toggle">
+                      Puerto Cancun
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <!-- SVG content -->
+                      </svg>
+                  </button>
+                  <div class="dropdown-menu">
+                      <div class="row">
+                          <div class="container" style="width: 400px;">
+                              <a href="#">Ver todo en venta</a>
+                          </div>
+                          <div class="col-sm-5 col-md-6">
+                              <a href="#">Casas</a>
+                              <a href="#">Departamentos</a>
+                              <a href="#">Ventas</a>
+                          </div>
+                          <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                              <a href="#">Terrenos</a>
+                              <a href="#">Pre-ventas</a>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li class="dropdown">
+                                    <button class="dropdown-toggle">
+                      Zonas
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <!-- SVG content -->
+                      </svg>
+                  </button>
+                  <div class="dropdown-menu">
+                      <div class="row">
+                          <div class="container" style="width: 400px;">
+                              <a href="#">Ver todas las zonas</a>
+                          </div>
+                          <div class="col-sm-5 col-md-6">
+                              <a href="#">Puerto Cancún</a>
+                              <a href="#">Cancún centro</a>
+                              <a href="#">Punta Sam</a>
+                          </div>
+                          <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                              <a href="#">Zona hotelera</a>
+                              <a href="#">Riviera Maya</a>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li><button>Vender</button></li>
+              <li><button type="button" class="btn btn-outline-light" style="border: white;">Inicio de sesión</button></li>
+              <li><button>988-000-0000</button></li>
+          </ul>
+      </nav>
+
       </div>
-      
+    </div>
+    <div id="buscador" class="text-center container">
+      <div id="Titulo">
+        <h2
+          style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">
+          Propiedades de Lujo en Cancun</h2>
+        <h1
+          style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">
+          EXPERTOS EN BIENES RAICES</h1>
+      </div>
+      <div id="Searchingbar" class="container mt-5">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 offset-md-3">
+            <div class="input-group mb-3">
+              <input type="text" id="TextoBusqueda" placeholder="Ciudad, Dirección, Código Postal"> <button
+                class="btn btn-warning" id="Search"><span><img src="/Icons/simbolo-de-interfaz-de-lupa-de-busqueda.png"
+                    width="20px" height="20px" style="margin-right:2px;"></span>Buscar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contacto" class="container text-center">
+    <h1 id="contactanos" style="font-family: 'Times New Roman', Times, serif;"> Contactanos Hoy</h1>
+  </div>
+  <div id="Telefono" class="container text-center">
+    <div class="row">
+      <div class="col-sm-5 col-md-6" style="margin-top: auto;"><button type="button" class="btn btn-light btn-lg"
+          id="Numerodetelefono">MEX 998-688-0710</button></div>
+      <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0" style="margin: auto;"><button type="button"
+          class="btn btn-light btn-lg" id="Numerodetelefono">US 817-400-4324</button></div>
+    </div>
+
   </div>
 
 
   <div id="ZonasDestacadas" style="background-color:#004888;">
     <div class="container">
       <div class="row">
-      <div class="col-sm-5 col-md-6" style="margin-top: auto;">
-      <h1 style="font-family: 'Times New Roman', Times, serif; color: white; padding: 2.5%;">ZONAS DESTACADAS</h1>
-      </div>
-      <div class="col-sm-5 col-md-6">
-        <div class="d-flex flex-row-reverse">
-        <h1 style="color: white; padding: 2.5%;"><button type="button" class="btn btn-outline-light" >TODAS LAS ZONAS  →</button></h1>
+        <div class="col-sm-5 col-md-6" style="margin-top: auto;">
+          <h1 style="font-family: 'Times New Roman', Times, serif; color: white; padding: 2.5%;">ZONAS DESTACADAS</h1>
         </div>
-      </div>
-      <div class="row align-items-center">
-        <div class="col align-items-center ">
-          <a href="#" class="card">
-            <img src="/Icons/PUERTOCANCUN.jpg" alt="balloon with an emoji face" class="card__img">
-            <span class="card__footer">
-              <span>PUERTO CANCUN</span>
-              
-            </span>
-            
-          </a>
+        <div class="col-sm-5 col-md-6">
+          <div class="d-flex flex-row-reverse">
+            <h1 style="color: white; padding: 2.5%;"><button type="button" class="btn btn-outline-light">TODAS LAS ZONAS
+                →</button></h1>
+          </div>
         </div>
-        <div class="col">
-          <a href="#" class="card">
-            <img src="/Icons/ZONAHOTELERA.jpg" alt="balloon with an emoji face" class="card__img">
-            <span class="card__footer">
-              <span>ZONA HOTELERA</span>
-             
-            </span>
-           
-          </a>
-        </div>
-        <div class="col">
-          <a href="#" class="card">
-            <img src="/Icons/PREVENTAS.jpg" alt="balloon with an emoji face" class="card__img">
-            <span class="card__footer">
-              <span>PREVENTAS | PRESALES</span>     
-            </span>
+        <div class="row align-items-center">
+          <div class="col align-items-center ">
+            <a href="#" class="card">
+              <img src="/Icons/PUERTOCANCUN.jpg" alt="balloon with an emoji face" class="card__img">
+              <span class="card__footer">
+                <span>PUERTO CANCUN</span>
 
-          </a>
+              </span>
+
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="card">
+              <img src="/Icons/ZONAHOTELERA.jpg" alt="balloon with an emoji face" class="card__img">
+              <span class="card__footer">
+                <span>ZONA HOTELERA</span>
+
+              </span>
+
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="card">
+              <img src="/Icons/PREVENTAS.jpg" alt="balloon with an emoji face" class="card__img">
+              <span class="card__footer">
+                <span>PREVENTAS | PRESALES</span>
+              </span>
+
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  </div>  
 
   <div id="Bienvenida">
     <div class="container" id="TextoBienvenida">
       <h1 style="margin-top: 2%; margin-bottom: 2%; font-family: 'Times New Roman', Times, serif;">
         Bienvenido a Mircorp
       </h1>
-      <h4 style="margin-top: 2%; margin-bottom: 5%; font-family: Arial, Helvetica, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+      <h4 style="margin-top: 2%; margin-bottom: 5%; font-family: Arial, Helvetica, sans-serif;">Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
       <div id="CardPropiedades">
-        <div id="container">	
-          <div class="product-details">         
-          <a href="#" style="text-decoration: none;"><h1>Propiedades Destacadas</h1></a>
-          <p class="information">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-  
-        <div class="control">  
-          <button class="btn">
-           <span class="Ver">Ver más</span>
-         </button> 
-        </div>       
-        </div> 
-        <div class="product-image">
-          <img src="/Icons/asdasd.jpg" alt="">
-        </div>  
+        <div id="container">
+          <div class="product-details">
+            <a href="#" style="text-decoration: none;">
+              <h1>Propiedades Destacadas</h1>
+            </a>
+            <p class="information">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat."</p>
+
+            <div class="control">
+              <button class="btn">
+                <span class="Ver">Ver más</span>
+              </button>
+            </div>
+          </div>
+          <div class="product-image">
+            <img src="/Icons/asdasd.jpg" alt="">
+          </div>
         </div>
       </div>
-    </div> 
+    </div>
   </div>
 
   <div class="container text-center" id="Busquedaportipo">
@@ -197,188 +253,266 @@
     <div div class="row align-items-start">
       <div class="col">
         <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-        <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Casas</h3>
-        <img src="/Icons/CASA.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Casas
+          </h3>
+          <img src="/Icons/CASA.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
         </a>
       </div>
       <div class="col">
         <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-        <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Departamentos</h3>
-        <img src="/Icons/DEPARTAMENTO.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">
+            Departamentos</h3>
+          <img src="/Icons/DEPARTAMENTO.jpg" width="100%" height="100%" alt=""
+            style="margin-top: 5%; margin-bottom: 5%;">
         </a>
       </div>
       <div class="col">
         <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-        <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Terrenos</h3>
-        <img src="/Icons/TERRENOS.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">
+            Terrenos</h3>
+          <img src="/Icons/TERRENOS.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
         </a>
       </div>
     </div>
-    
+
   </div>
 
   <div id="Preventas" class="container">
     <div id="CardPreventas">
-      <div id="container">	
-        <div class="product-details">         
-        <a href="#" style="text-decoration: none;"><h1>Pre-ventas</h1></a>
-        <p class="information">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+      <div id="container">
+        <div class="product-details">
+          <a href="#" style="text-decoration: none;">
+            <h1>Pre-ventas</h1>
+          </a>
+          <p class="information">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat."</p>
 
-      <div class="control">  
-        <button class="btn">
-         <span class="Ver">Ver más</span>
-       </button> 
-      </div>       
-      </div> 
-      <div class="product-image">
-        <img src="/Icons/PREVENTA.png" alt="">
-      </div>  
+          <div class="control">
+            <button class="btn">
+              <span class="Ver">Ver más</span>
+            </button>
+          </div>
+        </div>
+        <div class="product-image">
+          <img src="/Icons/PREVENTA.png" alt="">
+        </div>
       </div>
     </div>
   </div>
 
-  
+
   <div id="contacto" class="container text-center">
     <h1 id="contactanos"> Contactanos Hoy</h1>
   </div>
   <div id="Telefono" class="container text-center">
     <div class="row">
-      <div class="col-sm-5 col-md-6" style="margin-top: auto;"><button type="button" class="btn btn-light btn-lg" id="Numerodetelefono">MEX 998-688-0710</button></div>
-      <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0" style="margin: auto;"><button type="button" class="btn btn-light btn-lg" id="Numerodetelefono">US 817-400-4324</button></div>
+      <div class="col-sm-5 col-md-6" style="margin-top: auto;"><button type="button" class="btn btn-light btn-lg"
+          id="Numerodetelefono">MEX 998-688-0710</button></div>
+      <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0" style="margin: auto;"><button type="button"
+          class="btn btn-light btn-lg" id="Numerodetelefono">US 817-400-4324</button></div>
     </div>
   </div>
-    <div class="container text-center"  id="Busquedaportipo">
-      <div>
-        <h1 style="font-size: 300%;">Ver más propiedades</h1>
-      </div>
-      <div div class="row align-items-start" id="MasPropiedades">
-        <div class="col-6 col-sm-3">
-          <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Puerto Cancun
+  <div class="container text-center" id="Busquedaportipo">
+    <div>
+      <h1 style="font-size: 300%;">Ver más propiedades</h1>
+    </div>
+    <div div class="row align-items-start" id="MasPropiedades">
+      <div class="col-6 col-sm-3">
+        <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Puerto
+            Cancun
           </h3>
-          <img src="/Icons/puerto_cancun.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%; ">
-          </a>
-        </div>
-        <div class="col-6 col-sm-3">
-          <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Zona Hotelera</h3>
-          <img src="/Icons/ZONAHOTELERA.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
-          </a>
-        </div>
-        <div class="col-6 col-sm-3">
-          <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Pre Ventas</h3>
+          <img src="/Icons/puerto_cancun.jpg" width="100%" height="100%" alt=""
+            style="margin-top: 5%; margin-bottom: 5%; ">
+        </a>
+      </div>
+      <div class="col-6 col-sm-3">
+        <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Zona
+            Hotelera</h3>
+          <img src="/Icons/ZONAHOTELERA.jpg" width="100%" height="100%" alt=""
+            style="margin-top: 5%; margin-bottom: 5%;">
+        </a>
+      </div>
+      <div class="col-6 col-sm-3">
+        <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Pre
+            Ventas</h3>
           <img src="/Icons/PREVENTAS.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
-          </a>
-        </div>
-        <div class="col-6 col-sm-3">
-          <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Destacadas</h3>
+        </a>
+      </div>
+      <div class="col-6 col-sm-3">
+        <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">
+            Destacadas</h3>
           <img src="/Icons/DESTACADAS.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
-          </a>
-        </div>
+        </a>
       </div>
-      <div div class="row align-items-start" id="MasPropiedades">
-        <div class="col-6 col-sm-3">
-          <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Casas</h3>
+    </div>
+    <div div class="row align-items-start" id="MasPropiedades">
+      <div class="col-6 col-sm-3">
+        <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Casas
+          </h3>
           <img src="/Icons/CASA.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
-          </a>
-        </div>
-        <div class="col-6 col-sm-3">
-          <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Departamentos</h3>
-          <img src="/Icons/DEPARTAMENTO.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
-          </a>
-        </div>
-        <div class="col-6 col-sm-3">
-          <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Terrenos</h3>
-          <img src="/Icons/TERRENOS.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
-          </a>
-        </div>
-        <div class="col-6 col-sm-3">
-          <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
-          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">Desarrollos</h3>
-          <img src="/Icons/casa_en_venta_en_lagos_del_sol_7050017716316574002.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
-          </a>
-        </div>
+        </a>
       </div>
-      
+      <div class="col-6 col-sm-3">
+        <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">
+            Departamentos</h3>
+          <img src="/Icons/DEPARTAMENTO.jpg" width="100%" height="100%" alt=""
+            style="margin-top: 5%; margin-bottom: 5%;">
+        </a>
+      </div>
+      <div class="col-6 col-sm-3">
+        <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">
+            Terrenos</h3>
+          <img src="/Icons/TERRENOS.jpg" width="100%" height="100%" alt="" style="margin-top: 5%; margin-bottom: 5%;">
+        </a>
+      </div>
+      <div class="col-6 col-sm-3">
+        <a style="text-decoration: none; text-align: left; color: #004888; " href="#">
+          <h3 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;">
+            Desarrollos</h3>
+          <img src="/Icons/casa_en_venta_en_lagos_del_sol_7050017716316574002.jpg" width="100%" height="100%" alt=""
+            style="margin-top: 5%; margin-bottom: 5%;">
+        </a>
+      </div>
     </div>
-  
-    <div id="Conocenos" class="container text-center">
-      <a style="text-decoration: none; color: #000;" href="#"><h1 style="font-family: Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; margin-bottom:2% ;">Conoce al equipo de Mircorp</h1>
-        <img src="/Icons/istockphoto-1480574526-612x612.jpg" style="width: 70%;"/>
-      </a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <button class="btn">
-        <span class="Ver">Conoce el equipo</span>
-      </button> 
-    </div>
-  
-    <footer class="footer" id="footer" style="padding: 2% ;">
-     <div class="container" id="logo">
-      <a style="text-decoration: none; color: #ffffff;;" href="#"><img src="/Icons/Mircorp.png" width="500px" height="200px"></a>
+
+  </div>
+
+  <div id="Conocenos" class="container text-center">
+    <a style="text-decoration: none; color: #000;" href="#">
+      <h1
+        style="font-family: Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; margin-bottom:2% ;">
+        Conoce al equipo de Mircorp</h1>
+      <img src="/Icons/istockphoto-1480574526-612x612.jpg" style="width: 70%;" />
+    </a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
+    <button class="btn">
+      <span class="Ver">Conoce el equipo</span>
+    </button>
+  </div>
+
+  <footer class="footer" id="footer" style="padding: 2% ;">
+    <div class="container" id="logo">
+      <a style="text-decoration: none; color: #ffffff;;" href="#"><img src="/Icons/Mircorp.png" width="500px"
+          height="200px"></a>
       <div class="row">
-        
-        <div class="col" >
+
+        <div class="col">
           <ul>
-            <li><h5 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">COMUNIDADES</h5></li>
-            <a href="#"><li>PUERTO CANCUN</li></a>
-            <a href="#"><li>ZONA HOTELERA</li></a>
-            <a href="#"><li>CANCUN CENTRO</li></a>
-            <a href="#"><li>RIVIERA MAYA</li></a>
-            <a href="#"><li>PUNTA SAM/PLAYA MUJERES</li></a>
+            <li>
+              <h5
+                style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">
+                COMUNIDADES</h5>
+            </li>
+            <a href="#">
+              <li>PUERTO CANCUN</li>
+            </a>
+            <a href="#">
+              <li>ZONA HOTELERA</li>
+            </a>
+            <a href="#">
+              <li>CANCUN CENTRO</li>
+            </a>
+            <a href="#">
+              <li>RIVIERA MAYA</li>
+            </a>
+            <a href="#">
+              <li>PUNTA SAM/PLAYA MUJERES</li>
+            </a>
           </ul>
         </div>
-        
-        <div class="col" >
+
+        <div class="col">
           <ul>
-            <li><h5 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">COMPRA DE PROPIEDAD</h5></li>
-            <a href="#"><li>VER TODAS LAS PROPIEDADES</li></a>
-            <a href="#"><li>RENTAS</li></a>
+            <li>
+              <h5
+                style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">
+                COMPRA DE PROPIEDAD</h5>
+            </li>
+            <a href="#">
+              <li>VER TODAS LAS PROPIEDADES</li>
+            </a>
+            <a href="#">
+              <li>RENTAS</li>
+            </a>
         </div>
-        
-        <div class="col" >
+
+        <div class="col">
           <ul>
-            <li><h5 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">ASESORÍA DE VENTA</h5></li>
-            <a href="#"><li>VENTA DE PROPIEDAD</li></a>
+            <li>
+              <h5
+                style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">
+                ASESORÍA DE VENTA</h5>
+            </li>
+            <a href="#">
+              <li>VENTA DE PROPIEDAD</li>
+            </a>
           </ul>
         </div>
-        
-        <div class="col" >
+
+        <div class="col">
           <ul>
-            <li><h5 style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">NOSOTROS</h5></li>
-            <a href="#"><li>SOBRE MIRCORP</li></a>
-            <li><h5 style="margin-top: 80px; font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">UBICACIÓN</h5></li>
-            <p style="font-family: Poppins, Arial, Helvetica Neue, Helvetica, sans-serif; margin-top:15px;">Av. Bonampak Entrada Puerto Cancun
+            <li>
+              <h5
+                style=" font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">
+                NOSOTROS</h5>
+            </li>
+            <a href="#">
+              <li>SOBRE MIRCORP</li>
+            </a>
+            <li>
+              <h5
+                style="margin-top: 80px; font-family:  Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif; text-decoration: uppercase;">
+                UBICACIÓN</h5>
+            </li>
+            <p style="font-family: Poppins, Arial, Helvetica Neue, Helvetica, sans-serif; margin-top:15px;">Av. Bonampak
+              Entrada Puerto Cancun
               Plaza Nido, Local 4
               Cancun, Quintana Roo, CP 77500</p>
-              <li><a href="https://www.facebook.com/?locale=es_LA"><img src="/Icons/facebook (3).png" width="20px" height="20px"></a> <a href="https://www.instagram.com"><img src="/Icons/instagram (3).png" width="20px" height="20px"></a> <a href="https://www.x.com"><img src="/Icons/gorjeo (4).png" width="20px" height="20px"></a></li>
+            <li><a href="https://www.facebook.com/?locale=es_LA"><img src="/Icons/facebook (3).png" width="20px"
+                  height="20px"></a> <a href="https://www.instagram.com"><img src="/Icons/instagram (3).png"
+                  width="20px" height="20px"></a> <a href="https://www.x.com"><img src="/Icons/gorjeo (4).png"
+                  width="20px" height="20px"></a></li>
           </ul>
-          
+
         </div>
         <di class="container" style="margin-left: 2%;">
-          <a href="#">Bienes Raices Cancun</a> | <a href="#">Inmuebles de Lujo Cancun</a> | <a href="#">Puerto Cancun</a> - <a href="#">Mapa de Sitio</a> - <a href="#">Politica de Privacidad</a>
+          <a href="#">Bienes Raices Cancun</a> | <a href="#">Inmuebles de Lujo Cancun</a> | <a href="#">Puerto
+            Cancun</a> - <a href="#">Mapa de Sitio</a> - <a href="#">Politica de Privacidad</a>
           <div class="row">
-            <div class="col-sm-9 p-3">© 2024 <a href="#">MIRCORP</a> ALL RIGHTS RESERVED. <a href="#">9-000-000-000</a></div>
-            <div class="col-3 p-3 mb-2"><a href="=#"><img src="/Icons/Mircorp.png" width="180px" height="60px"></a></div>
+            <div class="col-sm-9 p-3">© 2024 <a href="#">MIRCORP</a> ALL RIGHTS RESERVED. <a href="#">9-000-000-000</a>
+            </div>
+            <div class="col-3 p-3 mb-2"><a href="=#"><img src="/Icons/Mircorp.png" width="180px" height="60px"></a>
+            </div>
           </div>
         </di>
-      
-        
-      </d>
-     </div>
-    </footer>
 
-    
-    <img class="btn-whatsapp" src="/Icons/social.png" width="50" height="50" alt="Whatsapp" onclick="window.location.href='https://wa.me/9900000?text=Hola!%20Estoy%20interesado%20en%20tu%20servicio'">
-    
-   <script src="/JavaScript/Javascript.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybRigFuxA3DfC7NSHgAW62p6pGfJULc9lIkvS2WZHvcOIJ2lF" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-WEo0oVQ3u04rJ42PgKjbVWrW8/HT2jPc0wS4UC/HeLvvVZOJ3BcUPWYfxqGcOKE3" crossorigin="anonymous"></script>
 
-  </body> 
-  
+        </d>
+      </div>
+  </footer>
+
+
+  <img class="btn-whatsapp" src="/Icons/social.png" width="50" height="50" alt="Whatsapp"
+    onclick="window.location.href='https://wa.me/9900000?text=Hola!%20Estoy%20interesado%20en%20tu%20servicio'">
+
+  <script src="/JavaScript/Javascript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz4fnFO9gybRigFuxA3DfC7NSHgAW62p6pGfJULc9lIkvS2WZHvcOIJ2lF"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-WEo0oVQ3u04rJ42PgKjbVWrW8/HT2jPc0wS4UC/HeLvvVZOJ3BcUPWYfxqGcOKE3"
+    crossorigin="anonymous"></script>
+
+</body>
+
 </html>

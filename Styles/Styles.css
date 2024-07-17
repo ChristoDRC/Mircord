@@ -26,11 +26,17 @@ body {
     display: inline-block;
   }
 }
+
 #menu {
   position: absolute;
   top: 60px;
   width: 100%;
   background: #00000000;
+
+  #InicioDeSesion{
+    border-color: white;
+    border: white;
+  }
 
   ul {
     margin: 0;
@@ -50,7 +56,8 @@ body {
     margin: 0 5px;
     padding: 0;
 
-    button, .dropdown-toggle {
+    button,
+    .dropdown-toggle {
       display: flex;
       align-items: center;
       color: #fff;
@@ -66,8 +73,10 @@ body {
       white-space: nowrap;
     }
 
-    button:hover, .dropdown-toggle:hover {
-      background-color: #ffffff00;
+    button:hover,
+    .dropdown-toggle:hover {
+      background-color: #ffffff3b;
+
     }
 
     .dropdown-toggle svg {
@@ -802,21 +811,46 @@ main h1 {
 #footer {
   background-color: #00396b;
   color: #ffffff;
+  padding: 20px; /* Añadido para darle algo de espacio al contenido del footer */
+
+  .footer-img a {
+    /* Estilos para los enlaces */
+    transition: none; /* Quitar la transición */
+  }
 
   li {
     margin-top: 10px;
-    text-decoration: none;
     list-style-type: none;
   }
 
   a {
     text-decoration: none;
-    color: #ffff;
+    color: #ffffff;
     font-family: Poppins, Arial, Helvetica Neue, Helvetica, sans-serif;
+    position: relative;
+    
+    transition: all 0.3s ease; /* Transición suave para el hover */
+  }
 
+  a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #ffffff;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.2s ease;
+  }
+
+  a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #ffffff; /* Color del subrayado */
   }
 }
-
 img.btn-whatsapp {
   display: block !important;
   position: fixed;

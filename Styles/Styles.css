@@ -32,11 +32,7 @@ body {
   top: 60px;
   width: 100%;
   background: #00000000;
-
-  #InicioDeSesion{
-    border-color: white;
-    border: white;
-  }
+  display: block;
 
   ul {
     margin: 0;
@@ -135,54 +131,80 @@ body {
     max-height: 400px;
     transition: max-height .4s ease;
   }
+  
 }
 
-
 @media only screen and (min-width: 768px) {
-
   #nav-mobile {
-    display: none;
+    display: flex;
+    float: right;
+    
   }
-
-
+  #nav-menu{
+    display: hidden;
+  }
   #menu {
     width: auto;
     float: right;
     top: 0;
     position: relative;
+  }
 
-    .open-menu {
-      box-shadow: none;
-    }
+  #menu .open-menu {
+    box-shadow: none;
+  }
 
+  #menu ul.nav-menu {
+    max-height: inherit;
+  }
 
-    ul {
-      max-height: inherit;
-    }
+  #menu ul.nav-menu li {
+    float: right;
+    border: 0;
+    background: transparent;
+  }
 
+  #menu ul.nav-menu li a,
+  #menu ul.nav-menu li button {
+    display: block;
+    color: #fff;
+   
+    border-radius: 5px;
+    padding: 10px;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-    li {
-      float: left;
-      border: 0;
-      background: transparent;
+  #menu ul.nav-menu li a:hover,
+  #menu ul.nav-menu li button:hover {
+    color: #eeeeee;
+    background: #00396b;
+  }
 
-      a {
-        display: block;
-        color: #fff;
-        border: white;
-        border-radius: 5px;
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
 
-        &:hover {
-          color: #eeeeee;
-          border: white;
-          background: #00396b;
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
-        }
-      }
-    }
+  .dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #ddd;
   }
 }
-
 
 /* Content */
 main {
@@ -198,8 +220,6 @@ main h1 {
   width: 100%;
   text-align: center;
 }
-
-
 
 /*Tipo de cambio*/
 #divisa {
@@ -223,12 +243,10 @@ main h1 {
   border-radius: 5px;
 }
 
-
 #divisa select:focus {
   outline: none;
   border-color: #999;
 }
-
 
 #Idioma {
   text-decoration: none;
@@ -236,8 +254,6 @@ main h1 {
   font-size: 16px;
   margin-right: 20px;
 }
-
-
 
 #buscador .text-center.container h1,
 #buscador #Titulo h1 {
@@ -252,8 +268,6 @@ main h1 {
 
 }
 
-
-
 #buscador .text-center.container h2,
 #buscador #Titulo h2 {
 
@@ -263,12 +277,12 @@ main h1 {
   border-color: #333;
 }
 
-
 /* Search bar styles */
 .input-group {
   width: 100%;
   background-image: linear-gradient(to top, #004888, #012545);
   padding: 5%;
+  align-items: flex;
 }
 
 #TextoBusqueda {
@@ -282,10 +296,26 @@ main h1 {
   color: white;
   border-radius: 5px;
 }
-
-
-
-
+@media (max-width: 799px) {
+  .input-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+#TextoBusqueda {
+  width: 80%;
+  border-radius: 5px;
+  margin-left: 2%;
+  width: 100%;
+  margin-right: 1%;
+}
+  #Search {
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+}
 #contacto {
   padding: 1.5%;
   color: white;
@@ -303,7 +333,6 @@ main h1 {
   width: 100%;
   height: 150%;
 }
-
 
 #TitleCard h1 {
   /* Styles applied to the <h1> element within the #TitleCard element */
@@ -402,20 +431,15 @@ main h1 {
 /*Propiedades destacadas*/
 
 #CardPropiedades {
-
   #container {
-
-
-
     background-color: #c3c3c32f;
     text-align: center;
     border-radius: 2px;
     overflow: hidden;
     margin: 5em auto;
-    height: auto;
+    height: 450px;
     width: 100%;
   }
-
 
   .product-details {
     position: relative;
@@ -425,8 +449,6 @@ main h1 {
     height: 100%;
     float: right;
     width: 50%;
-
-
   }
 
   #container .product-details h1 {
@@ -437,7 +459,6 @@ main h1 {
     margin-top: 10%;
     border-bottom: 2px solid #00396b;
     padding-bottom: 10px;
-
   }
 
   #container .product-details h1:before {
@@ -455,21 +476,15 @@ main h1 {
     color: white;
     margin: 0;
     animation: chan-sh 6s ease infinite;
-
   }
 
-
-
-  #container .product-details>p {
-
+  #container .product-details > p {
     text-align: left;
     font-size: 18px;
     color: #000000;
-
   }
 
   .btn {
-
     transform: translateY(0px);
     transition: 0.1s linear;
     background: linear-gradient(to top, #004888, #001c35);
@@ -481,7 +496,6 @@ main h1 {
     color: #eee;
     padding: 0;
     margin: 0;
-
   }
 
   .btn:hover {
@@ -490,36 +504,30 @@ main h1 {
   }
 
   .btn span {
-
     transition: transform 0.3s;
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.2em;
     margin: 0;
-
   }
-
 
   .btn .price {
     transform: translateX(-10%);
     padding-right: 15px;
   }
 
-
-
   .product-image {
     transition: all 0.3s ease-out;
     object-fit: cover;
-    image-resolution: absolote;
+    image-resolution: absolute;
     overflow: hidden;
-    width: 100%;
+    height: 120%;
     float: left;
     width: 50%;
     display: inline-block;
   }
 
   #container img {
-    width: 100%;
     height: 100%;
   }
 
@@ -541,7 +549,7 @@ main h1 {
   }
 
   .info h2 {
-    text-align: center
+    text-align: center;
   }
 
   .product-image:hover .info {
@@ -565,25 +573,181 @@ main h1 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
+  #container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .product-details {
     float: none;
-    /* Quitar float */
     width: 100%;
-    /* Ancho completo */
     margin-bottom: 20px;
-    /* Espacio entre elementos */
+    text-align: center;
   }
 
   .product-image {
     float: none;
-    /* Quitar float */
     width: 100%;
-    /* Ancho completo */
+    height: auto;
+  }
+
+  #container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 899px){
+  /* Pre ventas */
+/* Pre ventas */
+#CardPropiedades {
+  #container {
+    
+    background-color: #c3c3c32f;
+    text-align: center;
+    border-radius: 2px;
+    overflow: hidden;
+    height: 600px;
+    margin: 5em auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  #container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-details {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 2%;
+    width: 100%;
+  }
+
+  #container .product-details h1 {
+    font-family: Playfair Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+    display: inline-block;
+    font-size: 300%;
+    color: #00396b;
+    margin-top: 10%;
+    border-bottom: 2px solid #00396b;
+    padding-bottom: 10px;
+  }
+
+  #container .product-details h1:before {
+    position: absolute;
+    content: '';
+    right: 0%;
+    top: 0%;
+    transform: translate(25px, -15px);
+    font-family: 'Bree Serif', serif;
+    display: inline-block;
+    background: #bdbdbd;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px;
+    color: white;
+    margin: 0;
+    animation: chan-sh 6s ease infinite;
+  }
+
+  #container .product-details > p {
+    text-align: left;
+    font-size: 18px;
+    color: #000000;
+  }
+
+  .btn {
+    transform: translateY(0px);
+    transition: 0.1s linear;
+    background: linear-gradient(to top, #004888, #012545);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #eee;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .btn:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(to top, #004888, #012545);
+  }
+
+  .btn span {
+    transition: transform 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  .info {
+    background: rgba(27, 26, 26, 0.9);
+    font-family: 'Bree Serif', serif;
+    transition: all 0.3s ease-out;
+    transform: translateX(-100%);
+    position: absolute;
+    line-height: 1.8;
+    text-align: left;
+    font-size: 105%;
+    cursor: no-drop;
+    color: #FFF;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .info h2 {
+    text-align: center;
+  }
+
+  .product-image:hover .info {
+    transform: translateX(0);
+  }
+
+  .info ul li {
+    transition: 0.3s ease;
+  }
+
+  .info ul li:hover {
+    transform: translateX(50px) scale(1.3);
+  }
+
+  .product-image:hover img {
+    transition: all 0.3s ease-out;
+  }
+
+  .product-image:hover img {
+    transform: scale(1.2, 1.2);
   }
 }
 
+}
+
 /* Target the #Busquedaportipo element */
+@media (min-width: 900px){
 #Busquedaportipo {
   h1 {
     font-family: Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
@@ -606,24 +770,52 @@ main h1 {
       height: 250px;
     }
   }
-
-
-
+}
 }
 
+@media (max-width: 899px){
+  #Busquedaportipo {
+    h1 {
+      font-family: Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+      font-size: 2em;
+      color: #000000;
+      text-align: center;
+      margin: 5%;
+      padding: 2%;
+  
+    }
+  
+    img {
+      width: 200px;
+      height: 150px;
+    }
+  
+    #MasPropiedades {
+      img {
+      
+        width: 90px;
+        height: 90px
+      }
+    }
+  }
+  }
+  
+
+
+@media (min-width: 900px) {
 /*Pre ventas*/
 #CardPreventas {
 
   #container {
 
 
-
+    
     background-color: #c3c3c32f;
     text-align: center;
     border-radius: 2px;
     overflow: hidden;
     margin: 5em auto;
-    height: 50%;
+    height: 450px;
     width: 100%;
   }
 
@@ -717,14 +909,14 @@ main h1 {
     object-fit: cover;
     image-resolution: absolote;
     overflow: hidden;
-    height: 100%;
-    float: left;
+    height: 120%;
+    float: right;
     width: 50%;
     display: inline-block;
   }
 
   #container img {
-    width: 100%;
+
     height: 100%;
   }
 
@@ -769,7 +961,148 @@ main h1 {
     transform: scale(1.2, 1.2);
   }
 }
+}
 
+@media (max-width: 899px){
+  /* Pre ventas */
+/* Pre ventas */
+#CardPreventas {
+  #container {
+    background-color: #c3c3c32f;
+    text-align: center;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 5em auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  #container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-details {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 2%;
+    width: 100%;
+  }
+
+  #container .product-details h1 {
+    font-family: Playfair Display, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+    display: inline-block;
+    font-size: 300%;
+    color: #00396b;
+    margin-top: 10%;
+    border-bottom: 2px solid #00396b;
+    padding-bottom: 10px;
+  }
+
+  #container .product-details h1:before {
+    position: absolute;
+    content: '';
+    right: 0%;
+    top: 0%;
+    transform: translate(25px, -15px);
+    font-family: 'Bree Serif', serif;
+    display: inline-block;
+    background: #bdbdbd;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px;
+    color: white;
+    margin: 0;
+    animation: chan-sh 6s ease infinite;
+  }
+
+  #container .product-details > p {
+    text-align: left;
+    font-size: 18px;
+    color: #000000;
+  }
+
+  .btn {
+    transform: translateY(0px);
+    transition: 0.1s linear;
+    background: linear-gradient(to top, #004888, #012545);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #eee;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .btn:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(to top, #004888, #012545);
+  }
+
+  .btn span {
+    transition: transform 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  .info {
+    background: rgba(27, 26, 26, 0.9);
+    font-family: 'Bree Serif', serif;
+    transition: all 0.3s ease-out;
+    transform: translateX(-100%);
+    position: absolute;
+    line-height: 1.8;
+    text-align: left;
+    font-size: 105%;
+    cursor: no-drop;
+    color: #FFF;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .info h2 {
+    text-align: center;
+  }
+
+  .product-image:hover .info {
+    transform: translateX(0);
+  }
+
+  .info ul li {
+    transition: 0.3s ease;
+  }
+
+  .info ul li:hover {
+    transform: translateX(50px) scale(1.3);
+  }
+
+  .product-image:hover img {
+    transition: all 0.3s ease-out;
+  }
+
+  .product-image:hover img {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+}
 #Conocenos {
   margin-top: 10%;
   margin-bottom: 2%;
